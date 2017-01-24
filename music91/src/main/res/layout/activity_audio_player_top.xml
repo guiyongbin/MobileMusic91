@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/base_titlebar_bg"
+    android:orientation="vertical">
+
+    <!--返回按钮-->
+    <ImageView
+        android:id="@id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/audio_back_selector" />
+
+    <!--歌曲名-->
+    <TextView
+        android:id="@+id/audio_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="歌曲名"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

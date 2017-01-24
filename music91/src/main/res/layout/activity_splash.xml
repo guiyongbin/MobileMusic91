@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/base_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.itcast.mobileplayer91.ui.activity.SplashActivity">
+
+    <!--icon-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon" />
+
+    <!--广告语-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="好音乐，好心情"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

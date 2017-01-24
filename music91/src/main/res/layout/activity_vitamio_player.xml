@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itcast.mobileplayer91.ui.activity.VideoPlayerActivity">
+
+    <!--视频播放控件-->
+    <io.vov.vitamio.widget.VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <!--顶部面板-->
+    <include layout="@layout/activity_video_player_top" />
+
+    <!--底部面板-->
+    <include
+        layout="@layout/activity_video_player_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <!--亮度遮罩-->
+    <View
+        android:id="@+id/video_alpha_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e000" />
+
+    <!--加载遮罩-->
+    <LinearLayout
+        android:id="@+id/video_ll_loading_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_player_loading_background"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="正在加载中..."
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--缓冲提示-->
+    <ProgressBar
+        android:id="@+id/video_pb_buffering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

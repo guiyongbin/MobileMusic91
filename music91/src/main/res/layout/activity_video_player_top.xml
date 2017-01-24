@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_ll_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--系统信息栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_video_system_status"
+        android:gravity="center_vertical"
+        android:padding="6dp">
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/video_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="文件名"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <!--系统电量-->
+        <ImageView
+            android:id="@+id/video_iv_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:src="@mipmap/ic_battery_40" />
+
+        <!--系统时间-->
+        <TextView
+            android:id="@+id/video_tv_system_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统时间"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!--音量控制条-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_video_volume_control"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <!--静音-->
+        <ImageView
+            android:id="@+id/video_iv_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/video_mute_selector" />
+
+        <!--音量控制条-->
+        <SeekBar
+            android:id="@+id/video_sk_volume"
+            style="@android:style/Widget.SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxHeight="10dp"
+            android:minHeight="10dp"
+            android:progress="40"
+            android:progressDrawable="@drawable/video_seekbar_drawable"
+            android:thumb="@drawable/video_progress_thumb"
+            android:thumbOffset="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
